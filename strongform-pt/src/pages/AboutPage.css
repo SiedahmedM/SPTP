@@ -1,0 +1,115 @@
+.about-hero {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.mission-statement {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.meet-specialist {
+  background-color: var(--white);
+}
+
+.specialist-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.specialist-text h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  color: var(--primary-dark);
+}
+
+.specialist-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-gray);
+}
+
+.our-approach {
+  background-color: var(--light-gray);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background-color: var(--white);
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.value-card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--primary-dark);
+}
+
+.value-card p {
+  font-size: 16px;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.credentials {
+  background-color: var(--white);
+}
+
+.credentials-list {
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.credentials-list li {
+  font-size: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 30px;
+}
+
+.credentials-list li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-orange);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 36px;
+  }
+  
+  .specialist-text h2 {
+    font-size: 28px;
+  }
+  
+  .values-grid {
+    gap: 20px;
+  }
+}

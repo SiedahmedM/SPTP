@@ -1,0 +1,56 @@
+.services-grid {
+  background-color: var(--light-gray);
+}
+
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: var(--white);
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--primary-dark);
+}
+
+.service-card p {
+  font-size: 16px;
+  color: var(--text-gray);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.service-link {
+  font-weight: 600;
+  color: var(--accent-orange);
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.service-link:hover {
+  color: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+  .services-cards {
+    gap: 20px;
+  }
+  
+  .service-card {
+    padding: 30px 20px;
+  }
+}
