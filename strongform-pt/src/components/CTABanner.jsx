@@ -8,7 +8,7 @@ function CTABanner() {
       <div className="container">
         <div className="cta-content">
           <h2>Ready to Start Your Comeback?</h2>
-          <p>Book your one-on-one performance eval today.</p>
+          <p>Book your 1-on-1 performance eval today.</p>
           <Link to="/contact" className="btn btn-primary cta-button">
             Book Now
           </Link>

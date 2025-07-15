@@ -1,10 +1,11 @@
 import React from 'react'
+import CTASecondary from '../components/CTASecondary'
 import './AboutPage.css'
 
 function AboutPage() {
   const values = [
     {
-      title: 'One-on-One Always',
+      title: '1-on-1 Always',
       description: 'No handoffs. Full 60-minute care.'
     },
     {
@@ -18,10 +19,22 @@ function AboutPage() {
   ]
 
   const credentials = [
-    'Doctor of Physical Therapy (DPT)',
-    'Dry Needling Certified',
-    'Running Rehab Specialist',
-    'Barbell Rehab Method Certified'
+    {
+      title: 'Running Rehab Specialist',
+      description: 'Specialized training in movement analysis and running-specific injury rehabilitation'
+    },
+    {
+      title: 'Barbell Rehab Method Certification',
+      description: 'Evidence-based approach to strength training and barbell movement rehabilitation'
+    },
+    {
+      title: 'Dry Needling',
+      description: 'Advanced trigger point therapy and myofascial pain treatment techniques'
+    },
+    {
+      title: 'Doctor of Physical Therapy (DPT)',
+      description: 'Comprehensive clinical training in musculoskeletal assessment and treatment'
+    }
   ]
 
   return (
@@ -38,13 +51,27 @@ function AboutPage() {
       <section className="meet-specialist section">
         <div className="container">
           <div className="specialist-content">
+            <div className="specialist-photo">
+              <img src="/placeholder-photo.jpg" alt="Doctor Profile" className="profile-photo" />
+            </div>
             <div className="specialist-text">
               <h2>Meet the Specialist Behind Strongform</h2>
-              <p>
-                Hi — I'm [Your Name], a Doctor of Physical Therapy with a passion for helping athletes 
-                stay in the game. I built Strongform to provide rehab that is smart, progressive, and 
-                built around your performance goals.
-              </p>
+              <div className="bio">
+                <p>
+                  Hi — I'm [Your Name], a Doctor of Physical Therapy with a passion for helping athletes 
+                  stay in the game. I built Strongform to provide rehab that is smart, progressive, and 
+                  built around your performance goals.
+                </p>
+                <p>
+                  With specialized training in running biomechanics and strength-based rehabilitation, 
+                  I combine evidence-based treatment with real-world performance applications. My approach 
+                  focuses on not just getting you back to activity, but making you more resilient than before.
+                </p>
+                <p>
+                  When I'm not in the clinic, you'll find me training, running, or working on movement 
+                  optimization with athletes of all levels.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -66,14 +93,24 @@ function AboutPage() {
 
       <section className="credentials section">
         <div className="container">
-          <h2 className="section-title">Credentials</h2>
-          <ul className="credentials-list">
+          <h2 className="section-title">Credentials & Expertise</h2>
+          <div className="credentials-grid">
             {credentials.map((credential, index) => (
-              <li key={index}>{credential}</li>
+              <div key={index} className="credential-card">
+                <h3>{credential.title}</h3>
+                <p>{credential.description}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
+
+      <CTASecondary 
+        title="Ready to Work Together?"
+        subtitle="Schedule your evaluation and let's build your comeback plan."
+        buttonText="Book Your Evaluation"
+        variant="light"
+      />
     </div>
   )
 }

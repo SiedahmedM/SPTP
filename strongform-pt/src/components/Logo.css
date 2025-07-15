@@ -1,0 +1,80 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  /* Remove any border or outline */
+  border: none;
+  outline: none;
+  /* Remove white background by making it transparent */
+  filter: 
+    brightness(1.1) 
+    contrast(1.2) 
+    drop-shadow(0 0 0 transparent);
+  /* Create a dark background that matches the site */
+  background: var(--background-dark);
+  padding: 12px;
+  border-radius: 12px;
+  /* Use a subtle gradient to blend edges */
+  background: linear-gradient(135deg, 
+    var(--background-dark) 0%, 
+    var(--section-bg-dark) 100%);
+  /* Add subtle border to define the logo area */
+  border: 1px solid rgba(27, 186, 198, 0.1);
+}
+
+/* Hero logo specific styling for better integration */
+.hero-logo .logo-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  /* Enhanced blending for hero section */
+  filter: brightness(1.05) contrast(1.15);
+  /* Subtle shadow for depth */
+  box-shadow: 0 8px 32px rgba(27, 186, 198, 0.2);
+  background: linear-gradient(135deg, 
+    var(--background-dark) 0%, 
+    rgba(42, 42, 42, 0.8) 100%);
+  padding: 16px;
+  border: 1px solid rgba(27, 186, 198, 0.15);
+}
+
+/* Navigation logo specific sizing */
+.navigation .logo-image {
+  height: 45px;
+  width: auto;
+  /* Navigation specific styling - more subtle */
+  filter: brightness(1.02) contrast(1.1);
+  background: rgba(42, 42, 42, 0.6);
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(27, 186, 198, 0.08);
+}
+
+/* Remove any default image styling that might add backgrounds */
+.logo-image {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+@media (max-width: 768px) {
+  .navigation .logo-image {
+    height: 40px;
+  }
+  
+  .hero-logo .logo-image {
+    max-width: 250px;
+    box-shadow: 0 4px 16px rgba(27, 186, 198, 0.1);
+  }
+}

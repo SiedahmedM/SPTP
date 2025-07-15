@@ -1,6 +1,6 @@
 .cta-banner {
-  background-color: var(--accent-blue);
-  color: var(--white);
+  background-color: var(--primary-accent);
+  color: var(--primary-text-alt);
 }
 
 .cta-content {
@@ -12,7 +12,7 @@
 .cta-content h2 {
   font-size: 40px;
   margin-bottom: 16px;
-  color: var(--white);
+  color: var(--primary-text-alt);
 }
 
 .cta-content p {
@@ -22,14 +22,14 @@
 }
 
 .cta-button {
-  background-color: var(--white);
-  color: var(--accent-blue);
+  background-color: var(--cta-button);
+  color: var(--primary-text-alt);
   font-size: 18px;
   padding: 16px 40px;
 }
 
 .cta-button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--cta-button-hover);
   transform: translateY(-2px);
 }
 

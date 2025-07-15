@@ -1,9 +1,10 @@
 .navigation {
-  background-color: var(--white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-darker);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .nav-content {
@@ -14,10 +15,8 @@
 }
 
 .logo {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
@@ -28,12 +27,12 @@
 
 .nav-links a {
   font-weight: 600;
-  color: var(--primary-dark);
+  color: var(--text-primary);
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--accent-orange);
+  color: var(--primary-accent);
 }
 
 .nav-cta {
@@ -52,7 +51,7 @@
 .mobile-toggle span {
   width: 25px;
   height: 3px;
-  background-color: var(--primary-dark);
+  background-color: var(--text-primary);
   margin: 3px 0;
   transition: 0.3s;
 }
@@ -68,7 +67,7 @@
     left: -100%;
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: var(--white);
+    background-color: var(--background-darker);
     flex-direction: column;
     justify-content: flex-start;
     padding: 40px 20px;

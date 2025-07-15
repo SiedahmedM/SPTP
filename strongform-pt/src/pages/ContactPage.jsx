@@ -115,12 +115,6 @@ function ContactPage() {
                 <strong>Address:</strong>
                 <p>123 Performance Way<br />Athletic City, ST 12345</p>
               </div>
-              <div className="info-item">
-                <strong>Hours:</strong>
-                <p>Monday - Friday: 7:00 AM - 7:00 PM<br />
-                Saturday: 8:00 AM - 2:00 PM<br />
-                Sunday: Closed</p>
-              </div>
             </div>
           </div>
         </div>

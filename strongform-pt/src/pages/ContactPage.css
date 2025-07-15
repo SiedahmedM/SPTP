@@ -1,6 +1,6 @@
 .contact-hero {
-  background-color: var(--primary-dark);
-  color: var(--white);
+  background-color: var(--primary-accent);
+  color: var(--background-light);
   text-align: center;
   padding: 80px 0;
 }
@@ -22,7 +22,7 @@
 }
 
 .contact-form-section {
-  background-color: var(--light-gray);
+  background-color: var(--section-bg-dark);
 }
 
 .contact-content {
@@ -34,16 +34,16 @@
 }
 
 .form-container {
-  background-color: var(--white);
+  background-color: var(--card-bg);
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .form-container h2 {
   font-size: 32px;
   margin-bottom: 32px;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .contact-form {
@@ -60,23 +60,25 @@
 .form-group label {
   font-weight: 600;
   margin-bottom: 8px;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .form-group input,
 .form-group textarea {
   padding: 12px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   font-size: 16px;
   font-family: inherit;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
   transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--accent-orange);
+  border-color: var(--cta-button);
 }
 
 .contact-form button {
@@ -87,7 +89,7 @@
 .contact-info h3 {
   font-size: 24px;
   margin-bottom: 24px;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .info-item {
@@ -100,12 +102,12 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
-  color: var(--accent-orange);
+  color: var(--cta-button);
 }
 
 .info-item p {
   font-size: 16px;
-  color: var(--text-gray);
+  color: var(--text-subhead);
   line-height: 1.6;
 }
 

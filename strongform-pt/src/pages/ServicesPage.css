@@ -1,6 +1,6 @@
 .services-hero {
-  background-color: var(--primary-dark);
-  color: var(--white);
+  background-color: var(--primary-accent);
+  color: var(--background-light);
   text-align: center;
   padding: 100px 0;
 }
@@ -16,11 +16,11 @@
 }
 
 .service-detail {
-  background-color: var(--white);
+  background-color: var(--background-dark);
 }
 
 .service-detail.alt-bg {
-  background-color: var(--light-gray);
+  background-color: var(--section-bg-dark);
 }
 
 .service-content {
@@ -30,19 +30,19 @@
 
 .service-content h2 {
   font-size: 36px;
-  color: var(--primary-dark);
+  color: var(--text-primary);
   margin-bottom: 12px;
 }
 
 .service-subtitle {
   font-size: 24px;
-  color: var(--accent-orange);
+  color: var(--cta-button);
   margin-bottom: 24px;
 }
 
 .service-description {
   font-size: 18px;
-  color: var(--text-gray);
+  color: var(--text-subhead);
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -53,7 +53,7 @@
 
 .service-features h4 {
   font-size: 20px;
-  color: var(--primary-dark);
+  color: var(--text-primary);
   margin-bottom: 20px;
 }
 
@@ -67,30 +67,30 @@
   padding: 12px 0;
   padding-left: 30px;
   position: relative;
-  color: var(--text-gray);
+  color: var(--text-subhead);
 }
 
 .service-features li:before {
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--accent-orange);
+  color: var(--cta-button);
   font-weight: 700;
 }
 
 .service-ideal {
   font-size: 16px;
   font-style: italic;
-  color: var(--text-gray);
-  background-color: rgba(255, 69, 0, 0.05);
+  color: var(--text-subhead);
+  background-color: rgba(85, 184, 168, 0.1);
   padding: 20px;
-  border-left: 4px solid var(--accent-orange);
+  border-left: 4px solid var(--cta-button);
   border-radius: 4px;
 }
 
 .services-cta {
-  background-color: var(--accent-blue);
-  color: var(--white);
+  background-color: var(--secondary-accent);
+  color: var(--background-light);
 }
 
 .services-cta .cta-content {
@@ -100,7 +100,7 @@
 .services-cta h2 {
   font-size: 40px;
   margin-bottom: 16px;
-  color: var(--white);
+  color: var(--background-light);
 }
 
 .services-cta p {
@@ -110,8 +110,8 @@
 }
 
 .services-cta .btn-primary {
-  background-color: var(--white);
-  color: var(--accent-blue);
+  background-color: var(--background-light);
+  color: var(--secondary-accent);
 }
 
 @media (max-width: 768px) {

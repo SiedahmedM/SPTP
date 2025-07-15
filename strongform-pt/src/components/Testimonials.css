@@ -1,10 +1,10 @@
 .testimonials {
-  background-color: var(--primary-dark);
-  color: var(--white);
+  background-color: var(--primary-bg);
+  color: var(--primary-text-alt);
 }
 
 .testimonials .section-title {
-  color: var(--white);
+  color: var(--primary-text-alt);
 }
 
 .testimonials-grid {
@@ -25,12 +25,12 @@
   line-height: 1.8;
   margin-bottom: 16px;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--subhead-text);
 }
 
 .author {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--subtext-light-gray);
   font-weight: 600;
 }
 

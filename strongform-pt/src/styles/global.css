@@ -5,19 +5,48 @@
 }
 
 :root {
-  --primary-dark: #0E1A27;
-  --accent-orange: #FF4500;
-  --accent-blue: #007BFF;
-  --light-gray: #F7F9FA;
-  --white: #FFFFFF;
-  --text-gray: #666666;
+  /* Primary Colors - Dark Theme */
+  --primary-accent: #1BBAC6; /* Teal accent from logo */
+  --secondary-accent: #2DD4DA; /* Lighter teal variant */
+  
+  /* Background Colors - Dark Theme */
+  --background-dark: #1a1a1a; /* Very dark gray */
+  --background-darker: #0f0f0f; /* Darker background */
+  --section-bg-dark: #2a2a2a; /* Dark section background */
+  --section-bg-darker: #1f1f1f; /* Darker section background */
+  
+  /* Text Colors - Dark Theme */
+  --text-primary: #ffffff; /* White primary text */
+  --text-secondary: #e0e0e0; /* Light gray secondary text */
+  --text-subhead: #b0b0b0; /* Medium gray subheading text */
+  --text-muted: #808080; /* Muted text */
+  
+  /* CTA and Accent Colors */
+  --cta-button: #1BBAC6; /* Teal button */
+  --cta-button-hover: #16a2ac; /* Darker teal on hover */
+  --accent-highlight: #1BBAC6; /* Teal highlights */
+  
+  /* Additional Dark Theme Colors */
+  --primary-bg: #0f0f0f; /* Primary dark background */
+  --card-bg: #2a2a2a; /* Card backgrounds */
+  --border-color: #404040; /* Border color */
+  --primary-text-alt: #ffffff; /* Alternative primary text */
+  --subhead-text: #b0b0b0; /* Subheading text */
+  
+  /* Legacy color variables for compatibility */
+  --background-light: var(--background-dark);
+  --section-bg-alt: var(--section-bg-dark);
+  --footer-bg: var(--background-darker);
+  --light-bg-section: var(--section-bg-dark);
+  --subtext-light-gray: var(--text-muted);
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  color: var(--primary-dark);
+  color: var(--text-primary);
   overflow-x: hidden;
+  background-color: var(--background-dark);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,22 +79,22 @@ a {
 }
 
 .btn-primary {
-  background-color: var(--accent-orange);
-  color: var(--white);
+  background-color: var(--cta-button);
+  color: var(--primary-text-alt);
 }
 
 .btn-primary:hover {
-  background-color: #E63E00;
+  background-color: var(--cta-button-hover);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background-color: var(--accent-blue);
-  color: var(--white);
+  background-color: var(--primary-accent);
+  color: var(--primary-text-alt);
 }
 
 .btn-secondary:hover {
-  background-color: #0056b3;
+  background-color: var(--secondary-accent);
   transform: translateY(-2px);
 }
 

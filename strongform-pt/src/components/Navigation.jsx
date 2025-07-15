@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Logo from './Logo'
+import './Logo.css'
 import './Navigation.css'
 
 function Navigation() {
@@ -14,7 +16,7 @@ function Navigation() {
       <div className="container">
         <div className="nav-content">
           <Link to="/" className="logo">
-            STRONGFORM PT
+            <Logo width={120} height={45} />
           </Link>
           
           <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>

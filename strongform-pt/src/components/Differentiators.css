@@ -1,48 +1,69 @@
 .differentiators {
-  background-color: var(--light-gray);
+  background-color: var(--section-bg-dark);
 }
 
 .section-title {
   text-align: center;
   font-size: 40px;
   margin-bottom: 60px;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
   gap: 40px;
 }
 
-.feature-card {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: var(--white);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  position: relative;
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-}
-
-.feature-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.feature-card h3 {
+.step-number {
+  background-color: var(--cta-button);
+  color: var(--primary-text-alt);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 24px;
-  margin-bottom: 12px;
-  color: var(--primary-dark);
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
-.feature-card p {
+.step-content {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.step-content h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.step-content p {
   font-size: 16px;
-  color: var(--text-gray);
+  color: var(--text-secondary);
   line-height: 1.6;
+}
+
+.step-connector {
+  position: absolute;
+  left: 29px;
+  top: 60px;
+  width: 2px;
+  height: 40px;
+  background-color: var(--cta-button);
 }
 
 @media (max-width: 768px) {
@@ -51,11 +72,26 @@
     margin-bottom: 40px;
   }
   
-  .features-grid {
+  .steps-container {
+    gap: 30px;
+  }
+  
+  .step-item {
     gap: 20px;
   }
   
-  .feature-card {
-    padding: 30px 20px;
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .step-connector {
+    left: 24px;
+    top: 50px;
+  }
+  
+  .step-content h3 {
+    font-size: 20px;
   }
 }

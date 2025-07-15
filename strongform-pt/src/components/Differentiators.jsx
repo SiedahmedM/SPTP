@@ -2,34 +2,37 @@ import React from 'react'
 import './Differentiators.css'
 
 function Differentiators() {
-  const features = [
+  const steps = [
     {
-      icon: '👤',
-      title: 'One-on-One, Hour-Long Sessions',
-      description: 'No techs. No handoffs.'
+      number: '1',
+      title: '1-on-1 Care',
+      description: 'No aides or techs, just focused treatment'
     },
     {
-      icon: '🏋️',
-      title: 'Gym-Based Rehab',
-      description: 'We use barbells, sleds & turf — not just a table.'
+      number: '2',
+      title: 'Data-Driven Progress',
+      description: 'Objective measures to track your recovery'
     },
     {
-      icon: '📈',
-      title: 'Progressive, Measurable Plans',
-      description: 'See your progress week-to-week.'
+      number: '3',
+      title: 'Specialized Expertise',
+      description: 'Running Rehab | Barbell Rehab | Dry Needling'
     }
   ]
 
   return (
     <section className="differentiators section">
       <div className="container">
-        <h2 className="section-title">What Makes Strongform Different</h2>
-        <div className="features-grid">
-          {features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <div className="feature-icon">{feature.icon}</div>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
+        <h2 className="section-title">Ready to Get Back on Track?</h2>
+        <div className="steps-container">
+          {steps.map((step, index) => (
+            <div key={index} className="step-item">
+              <div className="step-number">{step.number}</div>
+              <div className="step-content">
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </div>
+              {index < steps.length - 1 && <div className="step-connector"></div>}
             </div>
           ))}
         </div>
