@@ -1,5 +1,8 @@
 .hero {
-  background-color: var(--background-dark);
+  background: var(--background-primary);
+  /* Modern gradient overlay for depth */
+  background-image: 
+    linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%);
   color: var(--text-primary);
   min-height: 700px;
   display: flex;

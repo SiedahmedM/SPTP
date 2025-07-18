@@ -5,16 +5,16 @@ import './AboutPage.css'
 function AboutPage() {
   const values = [
     {
-      title: '1-on-1 Always',
-      description: 'No handoffs. Full 60-minute care.'
+      title: 'One-on-One Always',
+      description: 'Full attention, no handoffs, complete focus on your goals.'
     },
     {
       title: 'Train Through It',
-      description: 'Rehab should move, not stall.'
+      description: 'Keep moving forward while we fix what\'s broken.'
     },
     {
       title: 'Return with Confidence',
-      description: 'Measurable return-to-play progressions.'
+      description: 'Measurable progress that proves you\'re ready.'
     }
   ]
 
@@ -41,9 +41,9 @@ function AboutPage() {
     <div className="about-page">
       <section className="about-hero section">
         <div className="container">
-          <h1>More Than Just Pain Relief</h1>
+          <h1>More Than Just <span className="text-copper">Pain Relief</span></h1>
           <p className="mission-statement">
-            At Strongform PT, we help active people not just recover — but rebuild and return stronger.
+            Movement-first rehab for people who take training seriously.
           </p>
         </div>
       </section>
@@ -57,19 +57,17 @@ function AboutPage() {
             <div className="specialist-text">
               <h2>Meet the Specialist Behind Strongform</h2>
               <div className="bio">
+                <h4>DPT from University of St. Augustine – Dallas</h4>
                 <p>
-                  Hi — I'm [Your Name], a Doctor of Physical Therapy with a passion for helping athletes 
-                  stay in the game. I built Strongform to provide rehab that is smart, progressive, and 
-                  built around your performance goals.
+                  OC-based runner, movement nerd, food explorer.
                 </p>
+                <blockquote>
+                  "Strongform exists because rehab should match your effort."
+                </blockquote>
                 <p>
                   With specialized training in running biomechanics and strength-based rehabilitation, 
                   I combine evidence-based treatment with real-world performance applications. My approach 
                   focuses on not just getting you back to activity, but making you more resilient than before.
-                </p>
-                <p>
-                  When I'm not in the clinic, you'll find me training, running, or working on movement 
-                  optimization with athletes of all levels.
                 </p>
               </div>
             </div>
@@ -79,7 +77,7 @@ function AboutPage() {
 
       <section className="our-approach section">
         <div className="container">
-          <h2 className="section-title">Our Approach</h2>
+          <h2 className="section-title">Core Values</h2>
           <div className="values-grid">
             {values.map((value, index) => (
               <div key={index} className="value-card">

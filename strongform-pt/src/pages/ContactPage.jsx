@@ -29,10 +29,10 @@ function ContactPage() {
     <div className="contact-page">
       <section className="contact-hero section">
         <div className="container">
-          <h1>Ready to Start?</h1>
-          <p>Book online or send a quick message below.</p>
+          <h1>Let's Get You <span className="text-copper">Started</span></h1>
+          <p>Ready to move better? Book your evaluation or get in touch.</p>
           <a 
-            href="https://janeapp.com" 
+            href="https://YOUR_CLINIKO_URL" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-primary booking-btn"
@@ -93,6 +93,24 @@ function ContactPage() {
                     onChange={handleChange}
                     required
                   ></textarea>
+                </div>
+
+                <div className="form-group checkbox-group">
+                  <label>What type of help do you need?</label>
+                  <div className="checkbox-options">
+                    <label className="checkbox-label">
+                      <input type="checkbox" name="help-type" value="running" />
+                      Running Rehab
+                    </label>
+                    <label className="checkbox-label">
+                      <input type="checkbox" name="help-type" value="strength" />
+                      Strength Training
+                    </label>
+                    <label className="checkbox-label">
+                      <input type="checkbox" name="help-type" value="sport" />
+                      Return to Sport
+                    </label>
+                  </div>
                 </div>
 
                 <button type="submit" className="btn btn-primary">

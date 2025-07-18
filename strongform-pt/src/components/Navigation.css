@@ -1,10 +1,13 @@
 .navigation {
-  background-color: var(--background-darker);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--background-primary);
+  /* Modern glass effect */
+  backdrop-filter: blur(16px);
+  background: rgba(18, 18, 20, 0.8);
+  box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .nav-content {
@@ -67,7 +70,8 @@
     left: -100%;
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: var(--background-darker);
+    background-color: var(--background-primary);
+    backdrop-filter: blur(16px);
     flex-direction: column;
     justify-content: flex-start;
     padding: 40px 20px;

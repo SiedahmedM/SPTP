@@ -1,5 +1,8 @@
 .differentiators {
-  background-color: var(--section-bg-dark);
+  background-color: var(--background-secondary);
+  /* Add subtle gradient for modern depth */
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(27, 186, 198, 0.05) 0%, transparent 50%);
 }
 
 .section-title {
@@ -27,8 +30,8 @@
 }
 
 .step-number {
-  background-color: var(--cta-button);
-  color: var(--primary-text-alt);
+  background: linear-gradient(135deg, var(--cta-button) 0%, var(--secondary-accent) 100%);
+  color: var(--text-primary);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -38,6 +41,8 @@
   font-size: 24px;
   font-weight: 700;
   flex-shrink: 0;
+  box-shadow: var(--shadow-accent);
+  border: 1px solid rgba(27, 186, 198, 0.3);
 }
 
 .step-content {
@@ -63,7 +68,8 @@
   top: 60px;
   width: 2px;
   height: 40px;
-  background-color: var(--cta-button);
+  background: linear-gradient(180deg, var(--cta-button) 0%, var(--border-primary) 100%);
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {

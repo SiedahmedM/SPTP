@@ -10,31 +10,20 @@ function Hero() {
       <div className="container">
         <div className="hero-content">
           <Logo width={300} includeText={true} className="hero-logo" />
-          <h1 className="hero-title">Rehab That Builds Runners</h1>
+          <h1 className="hero-title">
+            Rehab That Gets You Back. <span className="text-copper">Stronger.</span>
+          </h1>
           <p className="hero-subtext">
-            1-on-1 care for active adults, lifters, and recreational athletes who want to return stronger — not just cleared.
+            One-on-one physical therapy for runners, lifters, and athletes.
           </p>
-          <Link to="/contact" className="btn btn-primary hero-cta">
-            Book Your Evaluation
-          </Link>
-          
-          <div className="hero-features">
-            <div className="hero-feature">
-              <div className="feature-icon">👤</div>
-              <h3>1-on-1 Rehab</h3>
-              <p>Personalized care with a licensed physical therapist.</p>
-            </div>
-            <div className="hero-feature">
-              <div className="feature-icon">🏋️</div>
-              <h3>Gym-Based Training</h3>
-              <p>Performance focused rehab in an athletic environment.</p>
-            </div>
-            <div className="hero-feature">
-              <div className="feature-icon">📈</div>
-              <h3>Running Analysis</h3>
-              <p>Detailed assessment to improve your running form</p>
-            </div>
-          </div>
+          <a 
+            href="https://YOUR_CLINIKO_URL" 
+            className="btn btn-primary hero-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Your Eval
+          </a>
         </div>
       </div>
     </section>

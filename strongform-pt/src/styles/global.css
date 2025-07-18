@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,39 +8,61 @@
 }
 
 :root {
-  /* Primary Colors - Dark Theme */
+  /* Modern Dark Theme - Sophisticated & Balanced */
   --primary-accent: #1BBAC6; /* Teal accent from logo */
   --secondary-accent: #2DD4DA; /* Lighter teal variant */
   
-  /* Background Colors - Dark Theme */
-  --background-dark: #1a1a1a; /* Very dark gray */
-  --background-darker: #0f0f0f; /* Darker background */
-  --section-bg-dark: #2a2a2a; /* Dark section background */
-  --section-bg-darker: #1f1f1f; /* Darker section background */
+  /* Copper Accent Color from Typography Guide */
+  --copper-accent: #D2691E; /* Copper color for H3/Labels and accents */
+  --copper-light: rgba(210, 105, 30, 0.1); /* Subtle copper background */
   
-  /* Text Colors - Dark Theme */
-  --text-primary: #ffffff; /* White primary text */
-  --text-secondary: #e0e0e0; /* Light gray secondary text */
-  --text-subhead: #b0b0b0; /* Medium gray subheading text */
-  --text-muted: #808080; /* Muted text */
+  /* Background Colors - Modern Dark */
+  --background-primary: #121214; /* Primary background - softer than pure black */
+  --background-secondary: #1a1a1e; /* Secondary background - subtle lift */
+  --background-elevated: #232328; /* Elevated surfaces like cards */
+  --background-overlay: #2a2a30; /* Overlay backgrounds */
   
-  /* CTA and Accent Colors */
+  /* Text Colors - Better Contrast Hierarchy */
+  --text-primary: #f8f9fa; /* Softer white for better readability */
+  --text-secondary: #d1d5db; /* Light gray for secondary content */
+  --text-tertiary: #9ca3af; /* Medium gray for tertiary content */
+  --text-muted: #6b7280; /* Muted text for less important content */
+  --charcoal: #2c2c2c; /* Charcoal color from typography guide */
+  
+  /* Interactive & Accent Colors */
   --cta-button: #1BBAC6; /* Teal button */
   --cta-button-hover: #16a2ac; /* Darker teal on hover */
   --accent-highlight: #1BBAC6; /* Teal highlights */
+  --accent-subtle: rgba(27, 186, 198, 0.1); /* Subtle teal background */
   
-  /* Additional Dark Theme Colors */
-  --primary-bg: #0f0f0f; /* Primary dark background */
-  --card-bg: #2a2a2a; /* Card backgrounds */
-  --border-color: #404040; /* Border color */
-  --primary-text-alt: #ffffff; /* Alternative primary text */
-  --subhead-text: #b0b0b0; /* Subheading text */
+  /* Border & Divider Colors */
+  --border-primary: #374151; /* Primary borders */
+  --border-secondary: #2d3748; /* Secondary borders */
+  --border-subtle: rgba(255, 255, 255, 0.08); /* Very subtle borders */
   
-  /* Legacy color variables for compatibility */
-  --background-light: var(--background-dark);
-  --section-bg-alt: var(--section-bg-dark);
-  --footer-bg: var(--background-darker);
-  --light-bg-section: var(--section-bg-dark);
+  /* Shadow & Depth */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 4px 14px 0 rgba(27, 186, 198, 0.2);
+  
+  /* Legacy compatibility - mapped to modern variables */
+  --background-dark: var(--background-primary);
+  --background-darker: var(--background-primary);
+  --section-bg-dark: var(--background-secondary);
+  --section-bg-darker: var(--background-elevated);
+  --card-bg: var(--background-elevated);
+  --border-color: var(--border-primary);
+  --primary-bg: var(--background-primary);
+  --primary-text-alt: var(--text-primary);
+  --subhead-text: var(--text-tertiary);
+  --text-subhead: var(--text-tertiary);
+  
+  /* More legacy mappings */
+  --background-light: var(--background-secondary);
+  --section-bg-alt: var(--background-secondary);
+  --footer-bg: var(--background-primary);
+  --light-bg-section: var(--background-secondary);
   --subtext-light-gray: var(--text-muted);
 }
 
@@ -46,18 +71,86 @@ body {
   line-height: 1.6;
   color: var(--text-primary);
   overflow-x: hidden;
-  background-color: var(--background-dark);
+  background-color: var(--background-primary);
+  /* Add subtle texture for modern feel */
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
 }
 
+/* Typography System from Guide */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
+/* H1 (Hero) - 48px Bold White/Copper */
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* H2 - 32px SemiBold Charcoal */
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* H3/Labels - 24px Medium Copper */
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--copper-accent);
+  letter-spacing: 0.02em;
+}
+
+/* H4, H5, H6 */
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+/* Body Text - 18px Regular Charcoal */
+p, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Accent text class for copper highlights */
+.text-copper {
+  color: var(--copper-accent);
+}
+
+.text-accent {
+  color: var(--primary-accent);
 }
 
 .container {
@@ -69,33 +162,46 @@ a {
 .btn {
   display: inline-block;
   padding: 14px 32px;
+  /* CTA Button Text - 16-20px SemiBold White */
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
-  border-radius: 4px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  /* Modern button styling */
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(8px);
 }
 
 .btn-primary {
-  background-color: var(--cta-button);
-  color: var(--primary-text-alt);
+  background: linear-gradient(135deg, var(--cta-button) 0%, var(--secondary-accent) 100%);
+  color: var(--text-primary);
+  border: 1px solid rgba(27, 186, 198, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: var(--cta-button-hover);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--cta-button-hover) 0%, var(--cta-button) 100%);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-accent);
 }
 
 .btn-secondary {
-  background-color: var(--primary-accent);
-  color: var(--primary-text-alt);
+  background: var(--background-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
 }
 
 .btn-secondary:hover {
-  background-color: var(--secondary-accent);
-  transform: translateY(-2px);
+  background: var(--background-overlay);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-accent);
 }
 
 .section {

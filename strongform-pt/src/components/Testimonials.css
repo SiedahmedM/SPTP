@@ -1,10 +1,14 @@
 .testimonials {
-  background-color: var(--primary-bg);
-  color: var(--primary-text-alt);
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  /* Add sophisticated gradient overlay */
+  background-image: 
+    radial-gradient(circle at 30% 0%, rgba(27, 186, 198, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 70% 100%, rgba(45, 212, 218, 0.05) 0%, transparent 60%);
 }
 
 .testimonials .section-title {
-  color: var(--primary-text-alt);
+  color: var(--text-primary);
 }
 
 .testimonials-grid {
@@ -17,7 +21,20 @@
 
 .testimonial {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
+  background-color: var(--background-elevated);
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  /* Add subtle backdrop blur */
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-primary);
 }
 
 .quote {
@@ -25,12 +42,24 @@
   line-height: 1.8;
   margin-bottom: 16px;
   font-style: italic;
-  color: var(--subhead-text);
+  color: var(--text-secondary);
+  position: relative;
+}
+
+.quote::before {
+  content: '"';
+  font-size: 48px;
+  color: var(--primary-accent);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  opacity: 0.3;
+  font-family: serif;
 }
 
 .author {
   font-size: 14px;
-  color: var(--subtext-light-gray);
+  color: var(--text-muted);
   font-weight: 600;
 }
 

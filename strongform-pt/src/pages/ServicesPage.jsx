@@ -5,43 +5,25 @@ import './ServicesPage.css'
 function ServicesPage() {
   const services = [
     {
-      id: 'running',
+      id: 'running-rehab',
       title: 'Running Rehab',
-      subtitle: 'Run Without Setbacks',
-      description: 'Ideal for injured runners or those struggling with chronic pain',
-      features: [
-        'Comprehensive movement screens',
-        'Video gait analysis',
-        'Custom programming',
-        'Return-to-running protocols'
-      ],
-      ideal: 'Perfect for runners dealing with IT band syndrome, plantar fasciitis, runner\'s knee, or Achilles issues.'
+      description: 'Gait analysis, run form breakdown, return-to-run progression',
+      icon: '🏃‍♂️',
+      link: '/services/running-rehab'
     },
     {
-      id: 'sport',
-      title: 'Return to Sport',
-      subtitle: 'Game-Ready Return',
-      description: 'For basketball/field sport athletes post-injury or post-op',
-      features: [
-        'Isokinetic testing',
-        'Sport-specific reloading',
-        'Agility and power development',
-        'Return-to-play testing'
-      ],
-      ideal: 'Designed for athletes recovering from ACL tears, ankle sprains, or other sport-related injuries.'
-    },
-    {
-      id: 'strength',
+      id: 'strength-athlete',
       title: 'Strength Athlete Rehab',
-      subtitle: 'Train Through Pain',
-      description: 'Built for lifters and gym-goers',
-      features: [
-        'Movement assessment under load',
-        'Modified training programs',
-        'Technique refinement',
-        'Progressive loading strategies'
-      ],
-      ideal: 'For lifters dealing with shoulder impingement, low back pain, or mobility restrictions.'
+      description: 'Lift analysis (deadlift, squat, press), modify load → fix mechanics',
+      icon: '🏋️‍♀️',
+      link: '/services/strength-athlete'
+    },
+    {
+      id: 'return-to-sport',
+      title: 'Return to Sport',
+      description: 'Post-op or acute injury recovery, jump, cut, sprint, reactive drills',
+      icon: '⚽',
+      link: '/services/return-to-sport'
     }
   ]
 
@@ -49,39 +31,31 @@ function ServicesPage() {
     <div className="services-page">
       <section className="services-hero section">
         <div className="container">
-          <h1>How We Can Help</h1>
+          <h1>How We Can <span className="text-copper">Help</span></h1>
           <p className="services-intro">
-            Performance-based rehab tailored to your sport and goals
+            We don't treat diagnoses. We treat athletes. Choose the path that fits you:
           </p>
         </div>
       </section>
 
-      {services.map((service, index) => (
-        <section 
-          key={service.id} 
-          id={service.id} 
-          className={`service-detail section ${index % 2 === 1 ? 'alt-bg' : ''}`}
-        >
-          <div className="container">
-            <div className="service-content">
-              <h2>{service.title}</h2>
-              <h3 className="service-subtitle">{service.subtitle}</h3>
-              <p className="service-description">{service.description}</p>
-              
-              <div className="service-features">
-                <h4>What's Included:</h4>
-                <ul>
-                  {service.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-              
-              <p className="service-ideal">{service.ideal}</p>
-            </div>
+      <section className="services-tiles section">
+        <div className="container">
+          <div className="services-grid">
+            {services.map((service) => (
+              <a 
+                key={service.id}
+                href={service.link}
+                className="service-tile"
+              >
+                <div className="service-icon">{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <div className="service-arrow">→</div>
+              </a>
+            ))}
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       <CTASecondary 
         title="Not Sure Which Service Fits?"
@@ -89,16 +63,6 @@ function ServicesPage() {
         buttonText="Get a Free Consultation"
         variant="dark"
       />
-
-      <section className="services-cta section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Get Started?</h2>
-            <p>Book your evaluation today and start your journey back to peak performance.</p>
-            <a href="/contact" className="btn btn-primary">Schedule Your Evaluation</a>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

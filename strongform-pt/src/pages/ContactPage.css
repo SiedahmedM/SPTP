@@ -1,8 +1,12 @@
 .contact-hero {
-  background-color: var(--primary-accent);
-  color: var(--background-light);
+  background: linear-gradient(135deg, var(--primary-accent) 0%, var(--secondary-accent) 100%);
+  color: var(--text-primary);
   text-align: center;
   padding: 80px 0;
+  /* Add sophisticated texture overlay */
+  background-image: 
+    radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
 }
 
 .contact-hero h1 {
@@ -22,7 +26,10 @@
 }
 
 .contact-form-section {
-  background-color: var(--section-bg-dark);
+  background-color: var(--background-secondary);
+  /* Add modern gradient depth */
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(27, 186, 198, 0.04) 0%, transparent 50%);
 }
 
 .contact-content {
@@ -34,10 +41,26 @@
 }
 
 .form-container {
-  background-color: var(--card-bg);
+  background-color: var(--background-elevated);
   padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+  /* Add subtle inner glow */
+  position: relative;
+  overflow: hidden;
+}
+
+.form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(27, 186, 198, 0.03) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .form-container h2 {
@@ -66,19 +89,28 @@
 .form-group input,
 .form-group textarea {
   padding: 12px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
   font-size: 16px;
   font-family: inherit;
-  background-color: var(--background-dark);
+  background-color: var(--background-overlay);
   color: var(--text-primary);
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: var(--border-primary);
+  background-color: var(--background-elevated);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--cta-button);
+  box-shadow: 0 0 0 2px rgba(27, 186, 198, 0.2);
+  background-color: var(--background-elevated);
 }
 
 .contact-form button {
@@ -107,7 +139,7 @@
 
 .info-item p {
   font-size: 16px;
-  color: var(--text-subhead);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -128,4 +160,68 @@
   .form-container h2 {
     font-size: 28px;
   }
+}
+
+.checkbox-group {
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group > label {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+  color: var(--text-primary);
+}
+
+.checkbox-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 400 !important;
+  margin-bottom: 0 !important;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.checkbox-label:hover {
+  color: var(--text-primary);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-primary);
+  border-radius: 4px;
+  background-color: var(--background-elevated);
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+  background-color: var(--copper-accent);
+  border-color: var(--copper-accent);
+}
+
+.checkbox-label input[type="checkbox"]:checked::before {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.checkbox-label input[type="checkbox"]:hover {
+  border-color: var(--copper-accent);
 }

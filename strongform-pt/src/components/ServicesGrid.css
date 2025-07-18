@@ -1,5 +1,8 @@
 .services-grid {
-  background-color: var(--section-bg-dark);
+  background-color: var(--background-secondary);
+  /* Add subtle gradient for modern depth */
+  background-image: 
+    radial-gradient(circle at 50% 100%, rgba(27, 186, 198, 0.04) 0%, transparent 50%);
 }
 
 .services-cards {
@@ -9,17 +12,33 @@
 }
 
 .service-card {
-  background-color: var(--card-bg);
+  background-color: var(--background-elevated);
   padding: 40px 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-subtle);
+  /* Add subtle backdrop blur for modern glass effect */
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(27, 186, 198, 0.02) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-primary);
 }
 
 .service-card h3 {
@@ -43,7 +62,7 @@
 }
 
 .service-link:hover {
-  color: var(--primary-accent);
+  color: var(--secondary-accent);
 }
 
 @media (max-width: 768px) {

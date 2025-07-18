@@ -3,11 +3,17 @@
 }
 
 .cta-secondary.light {
-  background-color: var(--section-bg-dark);
+  background-color: var(--background-secondary);
+  /* Add subtle gradient for depth */
+  background-image: 
+    radial-gradient(circle at 30% 20%, rgba(27, 186, 198, 0.03) 0%, transparent 50%);
 }
 
 .cta-secondary.dark {
-  background-color: var(--primary-bg);
+  background-color: var(--background-primary);
+  /* Add subtle texture */
+  background-image: 
+    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
 }
 
 .cta-secondary-content {
@@ -23,7 +29,7 @@
 }
 
 .cta-secondary.dark h3 {
-  color: var(--primary-text-alt);
+  color: var(--text-primary);
 }
 
 .cta-secondary p {
@@ -34,7 +40,7 @@
 }
 
 .cta-secondary.dark p {
-  color: var(--subhead-text);
+  color: var(--text-secondary);
 }
 
 .cta-secondary-button {

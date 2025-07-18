@@ -1,0 +1,49 @@
+.final-cta {
+  background: var(--background-primary);
+  background-image: 
+    linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%),
+    radial-gradient(circle at 50% 50%, rgba(27, 186, 198, 0.1) 0%, transparent 70%);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.final-cta .cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.final-cta h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.final-cta p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.final-cta .btn {
+  font-size: 1.25rem;
+  padding: 1rem 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .final-cta {
+    padding: 3rem 0;
+  }
+  
+  .final-cta h2 {
+    font-size: 2rem;
+  }
+  
+  .final-cta p {
+    font-size: 1.1rem;
+  }
+  
+  .final-cta .btn {
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+  }
+}

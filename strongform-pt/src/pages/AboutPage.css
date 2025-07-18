@@ -1,8 +1,12 @@
 .about-hero {
-  background-color: var(--primary-accent);
-  color: var(--background-light);
+  background: linear-gradient(135deg, var(--primary-accent) 0%, var(--secondary-accent) 100%);
+  color: var(--text-primary);
   text-align: center;
   padding: 100px 0;
+  /* Add sophisticated texture */
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
 }
 
 .about-hero h1 {
@@ -19,7 +23,10 @@
 }
 
 .meet-specialist {
-  background-color: var(--background-dark);
+  background-color: var(--background-primary);
+  /* Add subtle gradient */
+  background-image: 
+    radial-gradient(circle at 70% 30%, rgba(27, 186, 198, 0.03) 0%, transparent 50%);
 }
 
 .specialist-content {
@@ -60,11 +67,14 @@
 .specialist-text p {
   font-size: 18px;
   line-height: 1.8;
-  color: var(--text-subhead);
+  color: var(--text-secondary);
 }
 
 .our-approach {
-  background-color: var(--section-bg-dark);
+  background-color: var(--background-secondary);
+  /* Add subtle gradient for depth */
+  background-image: 
+    radial-gradient(circle at 30% 70%, rgba(27, 186, 198, 0.04) 0%, transparent 50%);
 }
 
 .values-grid {
@@ -76,11 +86,20 @@
 }
 
 .value-card {
-  background-color: var(--card-bg);
+  background-color: var(--background-elevated);
   padding: 40px 30px;
-  border-radius: 8px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.value-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-primary);
 }
 
 .value-card h3 {
@@ -91,12 +110,15 @@
 
 .value-card p {
   font-size: 16px;
-  color: var(--text-subhead);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .credentials {
-  background-color: var(--background-dark);
+  background-color: var(--background-primary);
+  /* Add subtle texture */
+  background-image: 
+    radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
 }
 
 .credentials-grid {
@@ -108,11 +130,20 @@
 }
 
 .credential-card {
-  background-color: var(--card-bg);
+  background-color: var(--background-elevated);
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 12px;
   border-left: 4px solid var(--primary-accent);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.credential-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-primary);
 }
 
 .credential-card h3 {
@@ -123,7 +154,7 @@
 
 .credential-card p {
   font-size: 16px;
-  color: var(--text-subhead);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 

@@ -11,49 +11,50 @@
   /* Remove any border or outline */
   border: none;
   outline: none;
-  /* Remove white background by making it transparent */
-  filter: 
-    brightness(1.1) 
-    contrast(1.2) 
-    drop-shadow(0 0 0 transparent);
-  /* Create a dark background that matches the site */
-  background: var(--background-dark);
-  padding: 12px;
-  border-radius: 12px;
-  /* Use a subtle gradient to blend edges */
-  background: linear-gradient(135deg, 
-    var(--background-dark) 0%, 
-    var(--section-bg-dark) 100%);
-  /* Add subtle border to define the logo area */
-  border: 1px solid rgba(27, 186, 198, 0.1);
+  /* Modern subtle styling */
+  background: transparent;
+  /* Very subtle enhancement */
+  filter: brightness(1.02) contrast(1.05);
+  transition: all 0.3s ease;
 }
 
-/* Hero logo specific styling for better integration */
+/* Hero logo specific styling - modern and clean */
 .hero-logo .logo-image {
-  max-width: 300px;
+  max-width: 280px;
   width: 100%;
   height: auto;
-  /* Enhanced blending for hero section */
-  filter: brightness(1.05) contrast(1.15);
-  /* Subtle shadow for depth */
-  box-shadow: 0 8px 32px rgba(27, 186, 198, 0.2);
-  background: linear-gradient(135deg, 
-    var(--background-dark) 0%, 
-    rgba(42, 42, 42, 0.8) 100%);
-  padding: 16px;
-  border: 1px solid rgba(27, 186, 198, 0.15);
+  /* Very subtle enhancement for hero */
+  filter: brightness(1.03) contrast(1.08);
+  /* Minimal shadow for depth without being heavy */
+  box-shadow: var(--shadow-md);
+  /* Clean background with subtle elevation */
+  background: var(--background-elevated);
+  padding: 20px;
+  border-radius: 16px;
+  /* Very subtle border */
+  border: 1px solid var(--border-subtle);
 }
 
-/* Navigation logo specific sizing */
+/* Navigation logo specific sizing - clean and minimal */
 .navigation .logo-image {
-  height: 45px;
+  height: 42px;
   width: auto;
-  /* Navigation specific styling - more subtle */
-  filter: brightness(1.02) contrast(1.1);
-  background: rgba(42, 42, 42, 0.6);
-  padding: 6px;
-  border-radius: 8px;
-  border: 1px solid rgba(27, 186, 198, 0.08);
+  /* Keep navigation logo clean and simple */
+  background: transparent;
+  padding: 0;
+  border: none;
+  filter: brightness(1.01) contrast(1.02);
+}
+
+/* Hover effects for better interactivity */
+.navigation .logo-image:hover {
+  filter: brightness(1.05) contrast(1.05);
+  transform: scale(1.02);
+}
+
+.hero-logo .logo-image:hover {
+  filter: brightness(1.06) contrast(1.1);
+  box-shadow: var(--shadow-accent);
 }
 
 /* Remove any default image styling that might add backgrounds */
