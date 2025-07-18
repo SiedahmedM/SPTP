@@ -22,6 +22,105 @@
   align-items: center;
 }
 
+.logo-text {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  gap: 12px;
+  margin-right: auto;
+  padding-right: 40px;
+}
+
+.logo-text:hover {
+  transform: translateX(4px);
+}
+
+.logo-text:hover .logo-main {
+  background-position: 100% 50%;
+}
+
+.logo-main {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    135deg,
+    var(--text-primary) 0%,
+    var(--text-primary) 50%,
+    var(--primary-accent) 50%,
+    var(--primary-accent) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background-position 0.3s ease;
+}
+
+.logo-divider {
+  font-size: 20px;
+  color: var(--copper-accent);
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+.logo-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.logo-sub::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--copper-accent);
+  transition: width 0.3s ease;
+}
+
+.logo-text:hover .logo-sub::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    gap: 8px;
+    padding-right: 20px;
+  }
+  
+  .logo-main {
+    font-size: 18px;
+  }
+  
+  .logo-divider {
+    font-size: 16px;
+  }
+  
+  .logo-sub {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-sub {
+    display: none;
+  }
+  
+  .logo-divider {
+    display: none;
+  }
+}
+
 .nav-links {
   display: flex;
   align-items: center;

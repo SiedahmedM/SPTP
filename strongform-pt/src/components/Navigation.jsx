@@ -15,8 +15,10 @@ function Navigation() {
     <nav className="navigation">
       <div className="container">
         <div className="nav-content">
-          <Link to="/" className="logo">
-            <Logo width={120} height={45} />
+          <Link to="/" className="logo-text">
+            <span className="logo-main">STRONGFORM</span>
+            <span className="logo-divider">|</span>
+            <span className="logo-sub">Physical Therapy & Performance</span>
           </Link>
           
           <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
