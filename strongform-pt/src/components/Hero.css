@@ -1,14 +1,26 @@
 .hero {
-  background: var(--background-primary);
-  /* Modern gradient overlay for depth */
-  background-image: 
-    linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%);
+  background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: var(--text-primary);
   min-height: 700px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 17, 23, 0.85);
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .hero-content {
@@ -18,13 +30,20 @@
   padding: 80px 0;
 }
 
-.hero-logo {
-  margin-bottom: 30px;
+.hero-logo-wrapper {
+  background: white;
+  padding: 30px 50px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.hero-logo .logo-container {
-  justify-content: center;
-  margin-bottom: 20px;
+.hero-logo {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-title {

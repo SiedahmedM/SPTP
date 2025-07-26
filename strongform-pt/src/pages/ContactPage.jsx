@@ -1,12 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './ContactPage.css'
 
 function ContactPage() {
+  useEffect(() => {
+    const handleIFrameMessage = (e) => {
+      const clinikoBookings = document.getElementById('cliniko-43670318');
+      if (typeof e.data !== 'string') return;
+      if (e.data.search('cliniko-bookings-resize') > -1) {
+        const height = Number(e.data.split(':')[1]);
+        clinikoBookings.style.height = height + 'px';
+      }
+      e.data.search('cliniko-bookings-page') > -1 && clinikoBookings.scrollIntoView();
+    }
+    
+    window.addEventListener('message', handleIFrameMessage);
+    
+    return () => {
+      window.removeEventListener('message', handleIFrameMessage);
+    }
+  }, []);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    message: ''
+    message: '',
+    helpType: ''
   })
 
   const handleChange = (e) => {
@@ -22,23 +39,25 @@ function ContactPage() {
     console.log('Form submitted:', formData)
     // You can integrate with email service or backend here
     alert('Thank you for your message! We\'ll be in touch soon.')
-    setFormData({ name: '', email: '', phone: '', message: '' })
+    setFormData({ name: '', email: '', message: '', helpType: '' })
   }
 
   return (
     <div className="contact-page">
       <section className="contact-hero section">
         <div className="container">
-          <h1>Let's Get You <span className="text-copper">Started</span></h1>
-          <p>Ready to move better? Book your evaluation or get in touch.</p>
-          <a 
-            href="https://YOUR_CLINIKO_URL" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="btn btn-primary booking-btn"
-          >
-            Book Online
-          </a>
+          <h1>Let's get started.</h1>
+          <div className="cliniko-booking">
+            <iframe 
+              id='cliniko-43670318' 
+              src='https://strongform-physical-therapy-and-performance.ca1.cliniko.com/bookings?embedded=true' 
+              frameBorder='0' 
+              scrolling='auto' 
+              width='100%' 
+              height='1000' 
+              style={{pointerEvents: 'auto'}}
+            ></iframe>
+          </div>
         </div>
       </section>
 
@@ -73,18 +92,7 @@ function ContactPage() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="phone">Phone (optional)</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="message">What are you looking for help with? *</label>
+                  <label htmlFor="message">Message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -95,22 +103,19 @@ function ContactPage() {
                   ></textarea>
                 </div>
 
-                <div className="form-group checkbox-group">
-                  <label>What type of help do you need?</label>
-                  <div className="checkbox-options">
-                    <label className="checkbox-label">
-                      <input type="checkbox" name="help-type" value="running" />
-                      Running Rehab
-                    </label>
-                    <label className="checkbox-label">
-                      <input type="checkbox" name="help-type" value="strength" />
-                      Strength Training
-                    </label>
-                    <label className="checkbox-label">
-                      <input type="checkbox" name="help-type" value="sport" />
-                      Return to Sport
-                    </label>
-                  </div>
+                <div className="form-group">
+                  <label htmlFor="helpType">What are you looking for help with?</label>
+                  <select
+                    id="helpType"
+                    name="helpType"
+                    value={formData.helpType}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select an option</option>
+                    <option value="running">Running Rehab</option>
+                    <option value="strength">Strength Athlete Rehab</option>
+                    <option value="sport">Return to Sport</option>
+                  </select>
                 </div>
 
                 <button type="submit" className="btn btn-primary">
@@ -120,18 +125,33 @@ function ContactPage() {
             </div>
 
             <div className="contact-info">
-              <h3>Contact Information</h3>
+              <h3>Location</h3>
+              <div className="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106344.04521877444!2d-117.83280275!3d33.6846836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdbf7a5f5ffff%3A0x0!2sSanta%20Ana%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%"
+                  height="300"
+                  style={{border: 0}}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
               <div className="info-item">
-                <strong>Phone:</strong>
-                <p>(555) 123-4567</p>
+                <strong>Parking:</strong>
+                <p>Free parking available on-site</p>
               </div>
               <div className="info-item">
                 <strong>Email:</strong>
                 <p>info@strongformpt.com</p>
               </div>
               <div className="info-item">
-                <strong>Address:</strong>
-                <p>123 Performance Way<br />Athletic City, ST 12345</p>
+                <strong>Phone:</strong>
+                <p>(555) 123-4567</p>
+              </div>
+              <div className="social-icons">
+                <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
               </div>
             </div>
           </div>

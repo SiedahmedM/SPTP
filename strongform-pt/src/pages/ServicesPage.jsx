@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import CTASecondary from '../components/CTASecondary'
 import './ServicesPage.css'
 
@@ -42,17 +43,37 @@ function ServicesPage() {
         <div className="container">
           <div className="services-grid">
             {services.map((service) => (
-              <a 
+              <Link 
                 key={service.id}
-                href={service.link}
+                to={service.link}
                 className="service-tile"
               >
                 <div className="service-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <div className="service-arrow">→</div>
-              </a>
+              </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="credentials section">
+        <div className="container">
+          <h2 className="section-title">Credentials & Expertise</h2>
+          <div className="credentials-grid">
+            <div className="credential-card">
+              <h3>Running Rehab Specialist</h3>
+              <p>Specialized training in movement analysis and running-specific injury rehabilitation</p>
+            </div>
+            <div className="credential-card">
+              <h3>Barbell Rehab Method Certification</h3>
+              <p>Evidence-based approach to strength training and barbell movement rehabilitation</p>
+            </div>
+            <div className="credential-card">
+              <h3>Dry Needling</h3>
+              <p>Advanced trigger point therapy and myofascial pain treatment techniques</p>
+            </div>
           </div>
         </div>
       </section>

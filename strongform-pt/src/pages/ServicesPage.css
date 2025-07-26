@@ -225,6 +225,44 @@
   border-color: var(--primary-accent);
 }
 
+.credentials {
+  background: var(--background-primary);
+  padding: 80px 0;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.credential-card {
+  background: var(--background-secondary);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.credential-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.credential-card h3 {
+  font-size: 22px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.credential-card p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .services-hero h1 {
     font-size: 36px;
@@ -236,5 +274,13 @@
   
   .service-subtitle {
     font-size: 20px;
+  }
+  
+  .credentials {
+    padding: 60px 0;
+  }
+  
+  .credential-card {
+    padding: 20px;
   }
 }

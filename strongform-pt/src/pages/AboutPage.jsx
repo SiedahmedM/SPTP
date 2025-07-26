@@ -1,49 +1,32 @@
 import React from 'react'
 import CTASecondary from '../components/CTASecondary'
+import specialistHeadshot from '../assets/specialist-headshot.png'
 import './AboutPage.css'
 
 function AboutPage() {
   const values = [
     {
-      title: 'One-on-One Always',
-      description: 'Full attention, no handoffs, complete focus on your goals.'
-    },
-    {
       title: 'Train Through It',
-      description: 'Keep moving forward while we fix what\'s broken.'
+      description: 'You don\'t need to stop to get better'
     },
     {
-      title: 'Return with Confidence',
-      description: 'Measurable progress that proves you\'re ready.'
+      title: 'Individualized Always',
+      description: 'No cookie-cutter protocols'
+    },
+    {
+      title: 'Stronger Exit',
+      description: 'Rehab is the beginning of your comeback'
     }
   ]
 
-  const credentials = [
-    {
-      title: 'Running Rehab Specialist',
-      description: 'Specialized training in movement analysis and running-specific injury rehabilitation'
-    },
-    {
-      title: 'Barbell Rehab Method Certification',
-      description: 'Evidence-based approach to strength training and barbell movement rehabilitation'
-    },
-    {
-      title: 'Dry Needling',
-      description: 'Advanced trigger point therapy and myofascial pain treatment techniques'
-    },
-    {
-      title: 'Doctor of Physical Therapy (DPT)',
-      description: 'Comprehensive clinical training in musculoskeletal assessment and treatment'
-    }
-  ]
 
   return (
     <div className="about-page">
       <section className="about-hero section">
         <div className="container">
-          <h1>More Than Just <span className="text-copper">Pain Relief</span></h1>
+          <h1>Mission Statement</h1>
           <p className="mission-statement">
-            Movement-first rehab for people who take training seriously.
+            Strongform was built for people who take training seriously. Rehab shouldn't hold you back — it should build you up.
           </p>
         </div>
       </section>
@@ -52,17 +35,17 @@ function AboutPage() {
         <div className="container">
           <div className="specialist-content">
             <div className="specialist-photo">
-              <img src="/placeholder-photo.jpg" alt="Doctor Profile" className="profile-photo" />
+              <img src={specialistHeadshot} alt="Doctor Profile" className="profile-photo" />
             </div>
             <div className="specialist-text">
-              <h2>Meet the Specialist Behind Strongform</h2>
+              <h2>Meet the Specialist</h2>
               <div className="bio">
-                <h4>DPT from University of St. Augustine – Dallas</h4>
+                <h4>DPT from University of St. Augustine (Dallas)</h4>
                 <p>
-                  OC-based runner, movement nerd, food explorer.
+                  OC-based runner, podcast listener, movement nerd, food explorer
                 </p>
                 <blockquote>
-                  "Strongform exists because rehab should match your effort."
+                  "I built Strongform to give athletes rehab that respects their goals."
                 </blockquote>
                 <p>
                   With specialized training in running biomechanics and strength-based rehabilitation, 
@@ -89,19 +72,6 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="credentials section">
-        <div className="container">
-          <h2 className="section-title">Credentials & Expertise</h2>
-          <div className="credentials-grid">
-            {credentials.map((credential, index) => (
-              <div key={index} className="credential-card">
-                <h3>{credential.title}</h3>
-                <p>{credential.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CTASecondary 
         title="Ready to Work Together?"

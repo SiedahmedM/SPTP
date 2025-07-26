@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import WhoWeHelp from '../components/WhoWeHelp'
+import ProcessSteps from '../components/ProcessSteps'
 import Differentiators from '../components/Differentiators'
 import Approach from '../components/Approach'
 import ClientWins from '../components/ClientWins'
@@ -13,6 +14,7 @@ function HomePage() {
     <div className="home-page">
       <Hero />
       <WhoWeHelp />
+      <ProcessSteps />
       <Differentiators />
       <ClientWins />
       <InstagramGrid />
