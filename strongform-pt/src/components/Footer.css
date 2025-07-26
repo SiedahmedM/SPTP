@@ -2,10 +2,10 @@
   background-color: var(--background-primary);
   color: var(--text-primary);
   padding: 60px 0 20px;
-  /* Add subtle gradient texture */
+  /* Add subtle warm gradient texture */
   background-image: 
-    radial-gradient(circle at 0% 100%, rgba(27, 186, 198, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+    radial-gradient(circle at 0% 100%, rgba(210, 105, 30, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(230, 126, 34, 0.02) 0%, transparent 50%);
   border-top: 1px solid var(--border-subtle);
 }
 

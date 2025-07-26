@@ -32,7 +32,6 @@ function Differentiators() {
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
               </div>
-              {index < steps.length - 1 && <div className="step-connector"></div>}
             </div>
           ))}
         </div>

@@ -1,8 +1,8 @@
 .navigation {
   background-color: var(--background-primary);
-  /* Modern glass effect */
+  /* Light glass effect */
   backdrop-filter: blur(16px);
-  background: rgba(18, 18, 20, 0.8);
+  background: rgba(250, 249, 247, 0.95);
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;

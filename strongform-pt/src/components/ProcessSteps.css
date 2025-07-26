@@ -1,54 +1,234 @@
 .process-steps {
-  padding: 80px 0;
+  padding: 100px 0;
   background: var(--background-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--copper-accent) 50%,
+    transparent 100%
+  );
+  opacity: 0.2;
+  transform: translateY(-50%);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
 }
 
 .steps-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .step {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  padding: 30px;
-  background: var(--background-primary);
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+  padding: 3rem 2rem;
+  background: var(--background-elevated);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(210, 105, 30, 0.1) 0%,
+    rgba(230, 126, 34, 0.05) 100%
+  );
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.step:hover::before {
+  opacity: 1;
 }
 
 .step:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(210, 105, 30, 0.2);
+  border-color: var(--copper-accent);
 }
 
 .step-number {
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--accent-copper);
-  line-height: 1;
-  min-width: 60px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--copper-accent) 0%, var(--secondary-accent) 100%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(210, 105, 30, 0.3);
+  transition: all 0.4s ease;
+}
+
+.step:hover .step-number {
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 15px 40px rgba(210, 105, 30, 0.4);
+}
+
+.step-number::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--copper-accent);
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
 }
 
 .step-content {
-  flex: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .step-title {
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 12px;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.step:hover .step-title {
+  color: var(--copper-accent);
 }
 
 .step-description {
-  font-size: 18px;
+  font-size: 1.1rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.8;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Connection Lines */
+.steps-container::before,
+.steps-container::after {
+  content: '';
+  position: absolute;
+  top: 90px;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--copper-accent) 0%,
+    transparent 100%
+  );
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.steps-container::before {
+  left: 25%;
+  transform: translateX(-50%);
+}
+
+.steps-container::after {
+  right: 25%;
+  transform: translateX(50%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--copper-accent) 100%
+  );
+}
+
+/* Animated Background Elements */
+.process-steps::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(210, 105, 30, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  top: -200px;
+  right: -200px;
+  animation: float 20s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, 50px) scale(1.1);
+  }
+}
+
+@media (max-width: 968px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .steps-container::before,
+  .steps-container::after {
+    display: none;
+  }
+
+  .step {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .step-description {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -56,21 +236,26 @@
     padding: 60px 0;
   }
 
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
   .step {
-    padding: 20px;
-    gap: 20px;
+    padding: 2rem 1.5rem;
   }
 
   .step-number {
-    font-size: 36px;
-    min-width: 45px;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
   }
 
   .step-title {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .step-description {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }

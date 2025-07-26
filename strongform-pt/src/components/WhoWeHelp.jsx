@@ -8,21 +8,21 @@ function WhoWeHelp() {
       id: 'runners',
       title: 'Runners',
       description: 'Recover your stride, train through injury',
-      icon: '🏃‍♂️',
+      image: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       link: '/services/running-rehab'
     },
     {
       id: 'lifters',
       title: 'Lifters',
       description: 'Stay under the bar',
-      icon: '🏋️‍♀️',
+      image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       link: '/services/strength-athlete'
     },
     {
       id: 'athletes',
       title: 'Athletes',
       description: 'Return to game shape post-op',
-      icon: '⚽',
+      image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       link: '/services/return-to-sport'
     }
   ]
@@ -38,9 +38,15 @@ function WhoWeHelp() {
               to={service.link} 
               className="help-card"
             >
-              <div className="help-icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+              <div className="help-image-wrapper">
+                <img src={service.image} alt={service.title} className="help-image" />
+                <div className="help-overlay"></div>
+              </div>
+              <div className="help-content">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <span className="help-arrow">→</span>
+              </div>
             </Link>
           ))}
         </div>

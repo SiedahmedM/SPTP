@@ -8,43 +8,44 @@
 }
 
 :root {
-  /* Modern Dark Theme - Sophisticated & Balanced */
-  --primary-accent: #1BBAC6; /* Teal accent from logo */
-  --secondary-accent: #2DD4DA; /* Lighter teal variant */
+  /* Modern Light Theme - Warm & Professional */
+  --primary-accent: #D2691E; /* Orange/Copper from logo */
+  --secondary-accent: #E67E22; /* Complementary orange */
   
-  /* Copper Accent Color from Typography Guide */
-  --copper-accent: #D2691E; /* Copper color for H3/Labels and accents */
-  --copper-light: rgba(210, 105, 30, 0.1); /* Subtle copper background */
+  /* Copper/Orange Accent Colors */
+  --copper-accent: #D2691E; /* Primary orange/copper color */
+  --copper-light: rgba(210, 105, 30, 0.08); /* Subtle orange background */
+  --copper-dark: #B8591A; /* Darker orange for hover states */
   
-  /* Background Colors - Modern Dark */
-  --background-primary: #121214; /* Primary background - softer than pure black */
-  --background-secondary: #1a1a1e; /* Secondary background - subtle lift */
-  --background-elevated: #232328; /* Elevated surfaces like cards */
-  --background-overlay: #2a2a30; /* Overlay backgrounds */
+  /* Background Colors - Warm Light Theme */
+  --background-primary: #FAF9F7; /* Warm cream white */
+  --background-secondary: #F5F3F0; /* Light beige */
+  --background-elevated: #FFFFFF; /* Pure white for cards */
+  --background-overlay: #F9F7F5; /* Soft overlay */
   
-  /* Text Colors - Better Contrast Hierarchy */
-  --text-primary: #f8f9fa; /* Softer white for better readability */
-  --text-secondary: #d1d5db; /* Light gray for secondary content */
-  --text-tertiary: #9ca3af; /* Medium gray for tertiary content */
-  --text-muted: #6b7280; /* Muted text for less important content */
-  --charcoal: #2c2c2c; /* Charcoal color from typography guide */
+  /* Text Colors - Dark on Light */
+  --text-primary: #2C2825; /* Dark brown/charcoal */
+  --text-secondary: #4A453F; /* Medium brown */
+  --text-tertiary: #6B635A; /* Light brown */
+  --text-muted: #948B7F; /* Muted brown */
+  --charcoal: #2C2825; /* Dark charcoal */
   
   /* Interactive & Accent Colors */
-  --cta-button: #1BBAC6; /* Teal button */
-  --cta-button-hover: #16a2ac; /* Darker teal on hover */
-  --accent-highlight: #1BBAC6; /* Teal highlights */
-  --accent-subtle: rgba(27, 186, 198, 0.1); /* Subtle teal background */
+  --cta-button: #D2691E; /* Orange button */
+  --cta-button-hover: #B8591A; /* Darker orange on hover */
+  --accent-highlight: #D2691E; /* Orange highlights */
+  --accent-subtle: rgba(210, 105, 30, 0.08); /* Subtle orange background */
   
   /* Border & Divider Colors */
-  --border-primary: #374151; /* Primary borders */
-  --border-secondary: #2d3748; /* Secondary borders */
-  --border-subtle: rgba(255, 255, 255, 0.08); /* Very subtle borders */
+  --border-primary: #E8E4DF; /* Light warm gray borders */
+  --border-secondary: #DDD8D2; /* Slightly darker borders */
+  --border-subtle: rgba(0, 0, 0, 0.06); /* Very subtle borders */
   
   /* Shadow & Depth */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-  --shadow-accent: 0 4px 14px 0 rgba(27, 186, 198, 0.2);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
+  --shadow-accent: 0 4px 14px 0 rgba(210, 105, 30, 0.15);
   
   /* Legacy compatibility - mapped to modern variables */
   --background-dark: var(--background-primary);
@@ -72,10 +73,10 @@ body {
   color: var(--text-primary);
   overflow-x: hidden;
   background-color: var(--background-primary);
-  /* Add subtle texture for modern feel */
+  /* Add subtle warm texture */
   background-image: 
-    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.02) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(210, 105, 30, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(230, 126, 34, 0.02) 0%, transparent 50%);
 }
 
 /* Typography System from Guide */
@@ -181,8 +182,8 @@ a {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--cta-button) 0%, var(--secondary-accent) 100%);
-  color: var(--text-primary);
-  border: 1px solid rgba(27, 186, 198, 0.3);
+  color: #FFFFFF;
+  border: 1px solid rgba(210, 105, 30, 0.3);
 }
 
 .btn-primary:hover {
@@ -194,14 +195,14 @@ a {
 .btn-secondary {
   background: var(--background-elevated);
   color: var(--text-primary);
-  border: 1px solid var(--border-primary);
+  border: 2px solid var(--copper-accent);
 }
 
 .btn-secondary:hover {
-  background: var(--background-overlay);
+  background: var(--copper-light);
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
-  border-color: var(--primary-accent);
+  border-color: var(--copper-dark);
 }
 
 .section {
