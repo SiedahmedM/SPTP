@@ -16,7 +16,7 @@ function Differentiators() {
     {
       number: '3',
       title: 'Specialized Expertise',
-      description: 'Running Rehab | Barbell Rehab | Dry Needling'
+      description: 'Running Rehab | Barbell Rehab Method Certified | Dry Needling'
     }
   ]
 

@@ -9,7 +9,7 @@ function FinalCTA() {
           <h2>Ready to <span className="text-copper">Move Better?</span></h2>
           <p>Start your journey back to peak performance</p>
           <a 
-            href="https://YOUR_CLINIKO_URL"
+            href="https://strongform-physical-therapy-and-performance.ca1.cliniko.com/bookings"
             className="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"

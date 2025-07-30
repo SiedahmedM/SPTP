@@ -35,22 +35,26 @@ function AboutPage() {
         <div className="container">
           <div className="specialist-content">
             <div className="specialist-photo">
-              <img src={specialistHeadshot} alt="Doctor Profile" className="profile-photo" />
+              <img src={specialistHeadshot} alt="Dr. Ismaeel Zekeria" className="profile-photo" />
             </div>
             <div className="specialist-text">
               <h2>Meet the Specialist</h2>
               <div className="bio">
-                <h4>DPT from University of St. Augustine (Dallas)</h4>
+                <h4>Dr. Ismaeel Zekeria, PT, DPT</h4>
+                <h4>Physical Therapist & Coach</h4>
+                <p>Running Rehab Specialist | Barbell Rehab (BRM) Certified</p>
                 <p>
-                  OC-based runner, podcast listener, movement nerd, food explorer
-                </p>
-                <blockquote>
-                  "I built Strongform to give athletes rehab that respects their goals."
-                </blockquote>
-                <p>
-                  With specialized training in running biomechanics and strength-based rehabilitation, 
-                  I combine evidence-based treatment with real-world performance applications. My approach 
-                  focuses on not just getting you back to activity, but making you more resilient than before.
+                  Ismaeel earned his Bachelor's degree from California State University, Long Beach and 
+                  his Doctorate of Physical Therapy from the University of St. Augustine. His experience 
+                  ranges from everyday movers to endurance athletes, with a special focus on runners 
+                  and active professionals looking to get out of pain and back to doing what they love. 
+                  His clinical approach is rooted in performance-based rehab, movement analysis, and 
+                  strength training principles. He founded Strongform Physical Therapy & Performance on 
+                  the belief that rehab should be individualized, progressive, and empowering—not passive 
+                  or cookie-cutter. Ismaeel values precision, transparency, and educating his clients so 
+                  they understand the "why" behind their plan of care. When he's not in the clinic, you 
+                  can find him training, trying out new restaurants, or yelling at the TV during a good 
+                  fight night.
                 </p>
               </div>
             </div>

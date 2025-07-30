@@ -23,7 +23,6 @@ function ReturnToSportPage() {
                 <li>Shoulder dislocations and labral repairs</li>
                 <li>Meniscus repairs</li>
                 <li>Hip labral repairs</li>
-                <li>Concussion recovery</li>
                 <li>Post-fracture rehabilitation</li>
                 <li>Sport-specific injury prevention</li>
               </ul>

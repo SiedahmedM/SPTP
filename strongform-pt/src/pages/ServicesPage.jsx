@@ -4,27 +4,83 @@ import CTASecondary from '../components/CTASecondary'
 import './ServicesPage.css'
 
 function ServicesPage() {
-  const services = [
+  const serviceCategories = [
     {
-      id: 'running-rehab',
-      title: 'Running Rehab',
-      description: 'Gait analysis, run form breakdown, return-to-run progression',
-      icon: '🏃‍♂️',
-      link: '/services/running-rehab'
+      id: 'assessment',
+      title: 'Assessment & Analysis',
+      description: 'Comprehensive evaluation to identify root causes and movement dysfunctions',
+      icon: '🔍',
+      services: [
+        'Movement Screening & Analysis',
+        'Gait Analysis for Runners',
+        'Lift Analysis (Squat, Deadlift, Press)',
+        'Sport-Specific Movement Assessment',
+        'Biomechanical Evaluation',
+        'Injury Risk Assessment'
+      ]
     },
     {
-      id: 'strength-athlete',
-      title: 'Strength Athlete Rehab',
-      description: 'Lift analysis (deadlift, squat, press), modify load → fix mechanics',
-      icon: '🏋️‍♀️',
-      link: '/services/strength-athlete'
+      id: 'recovery',
+      title: 'Active Recovery',
+      description: 'Hands-on treatments and corrective interventions to restore function',
+      icon: '🤲',
+      services: [
+        'Manual Therapy & Joint Mobilization',
+        'Dry Needling & Trigger Point Release',
+        'Corrective Exercise Programming',
+        'Myofascial Release Techniques',
+        'Cupping & Instrument-Assisted Soft Tissue',
+        'Pain Science Education'
+      ]
     },
     {
-      id: 'return-to-sport',
+      id: 'performance',
+      title: 'Performance Rehabilitation',
+      description: 'Progressive loading and return-to-activity protocols',
+      icon: '📈',
+      services: [
+        'Return-to-Run Progressions',
+        'Return-to-Lift Protocols',
+        'Strength & Conditioning Programming',
+        'Plyometric & Reactive Training',
+        'Sport-Specific Conditioning',
+        'Load Management Strategies'
+      ]
+    },
+    {
+      id: 'specialized',
+      title: 'Specialized Programs',
+      description: 'Targeted interventions for specific populations and activities',
+      icon: '🎯',
+      services: [
+        'Running Injury Prevention',
+        'Powerlifting & Strength Sports',
+        'Post-Surgical Rehabilitation',
+        'Athletic Performance Enhancement',
+        'Injury Prevention Programs',
+        'Movement Quality Optimization'
+      ]
+    }
+  ]
+
+  const specialties = [
+    {
+      title: 'Running Rehabilitation',
+      description: 'Specialized expertise in running-related injuries and performance optimization',
+      link: '/services/running-rehab',
+      highlight: true
+    },
+    {
+      title: 'Strength Athlete Care',
+      description: 'Barbell Rehab Method certified approach to powerlifting and strength sports',
+      link: '/services/strength-athlete',
+      highlight: true
+    },
+    {
       title: 'Return to Sport',
-      description: 'Post-op or acute injury recovery, jump, cut, sprint, reactive drills',
-      icon: '⚽',
-      link: '/services/return-to-sport'
+      description: 'Comprehensive protocols for getting back to your sport stronger than before',
+      link: '/services/return-to-sport',
+      highlight: true
     }
   ]
 
@@ -32,26 +88,54 @@ function ServicesPage() {
     <div className="services-page">
       <section className="services-hero section">
         <div className="container">
-          <h1>How We Can <span className="text-copper">Help</span></h1>
+          <h1>Comprehensive <span className="text-copper">Services</span></h1>
           <p className="services-intro">
-            We don't treat diagnoses. We treat athletes. Choose the path that fits you:
+            Performance-based rehabilitation that gets you back to doing what you love — stronger than before.
           </p>
         </div>
       </section>
 
-      <section className="services-tiles section">
+      <section className="service-categories section">
         <div className="container">
-          <div className="services-grid">
-            {services.map((service) => (
+          <h2 className="section-title">Our Treatment Approach</h2>
+          <div className="categories-grid">
+            {serviceCategories.map((category) => (
+              <div key={category.id} className="category-card" data-category={category.id}>
+                <div className="category-header">
+                  <div className="category-icon">{category.icon}</div>
+                  <h3>{category.title}</h3>
+                  <p className="category-description">{category.description}</p>
+                </div>
+                <ul className="services-list">
+                  {category.services.map((service, index) => (
+                    <li key={index} className="service-item">
+                      <span className="service-bullet">•</span>
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="specialties section">
+        <div className="container">
+          <h2 className="section-title">Specialty Programs</h2>
+          <p className="section-subtitle">
+            Deep expertise in specific populations and training methodologies
+          </p>
+          <div className="specialties-grid">
+            {specialties.map((specialty, index) => (
               <Link 
-                key={service.id}
-                to={service.link}
-                className="service-tile"
+                key={index}
+                to={specialty.link}
+                className={`specialty-card ${specialty.highlight ? 'featured' : ''}`}
               >
-                <div className="service-icon">{service.icon}</div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <div className="service-arrow">→</div>
+                <h3>{specialty.title}</h3>
+                <p>{specialty.description}</p>
+                <div className="specialty-arrow">→</div>
               </Link>
             ))}
           </div>
@@ -67,11 +151,11 @@ function ServicesPage() {
               <p>Specialized training in movement analysis and running-specific injury rehabilitation</p>
             </div>
             <div className="credential-card">
-              <h3>Barbell Rehab Method Certification</h3>
+              <h3>Barbell Rehab Method Certified</h3>
               <p>Evidence-based approach to strength training and barbell movement rehabilitation</p>
             </div>
             <div className="credential-card">
-              <h3>Dry Needling</h3>
+              <h3>Dry Needling Certified</h3>
               <p>Advanced trigger point therapy and myofascial pain treatment techniques</p>
             </div>
           </div>
@@ -79,9 +163,9 @@ function ServicesPage() {
       </section>
 
       <CTASecondary 
-        title="Not Sure Which Service Fits?"
-        subtitle="Every injury is different. Let's talk through your specific situation."
-        buttonText="Get a Free Consultation"
+        title="Ready to Start Your Recovery?"
+        subtitle="Every injury is unique. Let's create a personalized plan that gets you back to peak performance."
+        buttonText="Schedule Your Evaluation"
         variant="dark"
       />
     </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './CTABanner.css'
 
 function CTABanner() {
@@ -9,9 +8,14 @@ function CTABanner() {
         <div className="cta-content">
           <h2>Ready to Start Your Comeback?</h2>
           <p>Book your 1-on-1 performance eval today.</p>
-          <Link to="/contact" className="btn btn-primary cta-button">
+          <a 
+            href="https://strongform-physical-therapy-and-performance.ca1.cliniko.com/bookings"
+            className="btn btn-primary cta-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Book Now
-          </Link>
+          </a>
         </div>
       </div>
     </section>

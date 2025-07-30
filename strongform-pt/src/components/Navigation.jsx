@@ -26,9 +26,15 @@ function Navigation() {
             <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
             <Link to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link>
             <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-            <Link to="/contact" className="btn btn-primary nav-cta" onClick={() => setIsMenuOpen(false)}>
+            <a 
+              href="https://strongform-physical-therapy-and-performance.ca1.cliniko.com/bookings"
+              className="btn btn-primary nav-cta" 
+              onClick={() => setIsMenuOpen(false)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Book Now
-            </Link>
+            </a>
           </div>
           
           <button className="mobile-toggle" onClick={toggleMenu}>
