@@ -33,9 +33,9 @@ function Footer() {
           
           <div className="footer-section">
             <h4>Contact</h4>
-            <p>(555) 123-4567</p>
-            <p>info@strongformpt.com</p>
-            <p>123 Performance Way<br />Athletic City, ST 12345</p>
+            <p>(714) 489-1817</p>
+            <p>ismaaeel@strongformpt.com</p>
+            <p>17811 DAVENPORT RD #46<br />Dallas, TX 75252</p>
           </div>
         </div>
         

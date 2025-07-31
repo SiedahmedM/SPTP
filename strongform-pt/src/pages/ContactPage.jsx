@@ -47,6 +47,28 @@ function ContactPage() {
       <section className="contact-hero section">
         <div className="container">
           <h1>Let's get started.</h1>
+          
+          {/* Booking Fallback - Show until Cliniko is enabled */}
+          <div className="booking-fallback">
+            <div className="fallback-card">
+              <h3>Ready to Book Your Evaluation?</h3>
+              <p>While we set up online booking, you can schedule directly:</p>
+              <div className="contact-options">
+                <a href="tel:+17144891817" className="contact-option">
+                  <span className="contact-icon">📞</span>
+                  <span>Call: (714) 489-1817</span>
+                </a>
+                <a href="mailto:ismaaeel@strongformpt.com" className="contact-option">
+                  <span className="contact-icon">✉️</span>
+                  <span>Email: ismaaeel@strongformpt.com</span>
+                </a>
+              </div>
+              <p className="fallback-note">
+                <strong>Quick Response:</strong> We'll confirm your appointment within 2 hours!
+              </p>
+            </div>
+          </div>
+          
           <div className="cliniko-booking">
             <iframe 
               id='cliniko-61334727' 
@@ -128,7 +150,7 @@ function ContactPage() {
               <h3>Location</h3>
               <div className="map-container">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106344.04521877444!2d-117.83280275!3d33.6846836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdbf7a5f5ffff%3A0x0!2sSanta%20Ana%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3338.5987876354433!2d-96.85445068481831!3d33.11547448089055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c28e7e9d1c4e9%3A0x7b5c5c5c5c5c5c5c!2s17811%20Davenport%20Rd%2C%20Dallas%2C%20TX%2075252!5e0!3m2!1sen!2sus!4v1234567890"
                   width="100%"
                   height="300"
                   style={{border: 0}}
@@ -138,16 +160,16 @@ function ContactPage() {
                 ></iframe>
               </div>
               <div className="info-item">
-                <strong>Parking:</strong>
-                <p>Free parking available on-site</p>
+                <strong>Address:</strong>
+                <p>17811 DAVENPORT RD #46<br />Dallas, TX 75252</p>
               </div>
               <div className="info-item">
                 <strong>Email:</strong>
-                <p>info@strongformpt.com</p>
+                <p>ismaaeel@strongformpt.com</p>
               </div>
               <div className="info-item">
                 <strong>Phone:</strong>
-                <p>(555) 123-4567</p>
+                <p>(714) 489-1817</p>
               </div>
               <div className="social-icons">
                 <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
