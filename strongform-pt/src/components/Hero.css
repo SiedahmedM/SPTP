@@ -9,7 +9,7 @@
 }
 
 .hero {
-  background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-image: url('https://images.unsplash.com/photo-eGSBVVtVCCw?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -377,6 +377,12 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    background-position: center center;
+    min-height: 100svh; /* Use svh for better mobile support */
+  }
+  
   .hero-title {
     font-size: 36px;
   }
@@ -404,4 +410,33 @@
   .shape-1 { width: 200px; height: 200px; }
   .shape-2 { width: 150px; height: 150px; }
   .shape-3 { width: 180px; height: 180px; }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .hero {
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  
+  .hero-subtext {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  
+  .hero-content {
+    padding: 40px 15px;
+  }
+  
+  .hero-logo {
+    max-width: 250px;
+  }
 }
